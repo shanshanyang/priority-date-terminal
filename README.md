@@ -4,6 +4,6 @@
 
 ## Usage
 
-clone or fork this repo and run `node index.js`
+clone or fork this repo and run `npm i && node index.js`
 
 ![Imgur](http://i.imgur.com/zXCrQrN.gif)
