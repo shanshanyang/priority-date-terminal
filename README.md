@@ -4,6 +4,8 @@
 
 ## Usage
 
-clone or fork this repo and run `npm i && node index.js`
+install globally `npm i -g priority-date-terminal`
+
+run 'priority-date-terminal'
 
 ![Imgur](http://i.imgur.com/zXCrQrN.gif)
