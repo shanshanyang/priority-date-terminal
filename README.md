@@ -6,6 +6,6 @@
 
 install globally `npm i -g priority-date-terminal`
 
-run 'priority-date-terminal'
+run `priority-date-terminal`
 
 ![Imgur](http://i.imgur.com/zXCrQrN.gif)
