@@ -29,6 +29,18 @@ const questions = [
   },
   {
     type: 'list',
+    name: 'Country',
+    message: 'What is your country of birth?',
+    choices: [
+      'chinaMLB',
+      'philippines',
+      'mexico',
+      'india',
+      'allExcept'
+    ]
+  },
+  {
+    type: 'list',
     name: 'Category',
     message: 'What is your Immigration Category?',
     choices: [
@@ -39,53 +51,32 @@ const questions = [
 ];
 
 inquirer.prompt( questions, function( answers ) {
-  let moreQuestions = [
-    {
-      type: 'list',
-      name: 'Country',
-      message: 'What is your country of birth?',
-      choices: [
-        'chinaMLB',
-        'philippines',
-        'mexico',
-        'india',
-        'allExcept'
-      ]
-    }
-  ];
-
-  if (answers.Category === 'employmentBased') {
-    moreQuestions = moreQuestions.concat({
-      type: 'list',
-      name: 'Type',
-      message: 'What is your employment based category?',
-      choices: [
-        'first',
-        'second',
-        'third',
-        'fourth',
-        'fifth',
-        'fifthb',
-        'otherWorkers',
-        'certainReligiousWorkers'
-      ]
-    });
-  }
-
-  if (answers.Category === 'familySponsered') {
-    moreQuestions = moreQuestions.concat({
-      type: 'list',
-      name: 'Type',
-      message: 'What is your family based category?',
-      choices: [
-        'F1',
-        'F2a',
-        'F2b',
-        'F3',
-        'F4'
-      ]
-    });
-  }
+  const moreQuestions = answers.Category === 'employmentBased' ? [{
+    type: 'list',
+    name: 'Type',
+    message: 'What is your employment based category?',
+    choices: [
+      'first',
+      'second',
+      'third',
+      'fourth',
+      'fifth',
+      'fifthb',
+      'otherWorkers',
+      'certainReligiousWorkers'
+    ]
+  }] : [{
+    type: 'list',
+    name: 'Type',
+    message: 'What is your family based category?',
+    choices: [
+      'F1',
+      'F2a',
+      'F2b',
+      'F3',
+      'F4'
+    ]
+  }];
 
   inquirer.prompt(moreQuestions, function(moreanswers) {
 
