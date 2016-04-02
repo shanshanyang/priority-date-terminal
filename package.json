@@ -1,6 +1,6 @@
 {
   "name": "priority-date-terminal",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check your greencard priority date with command line interface",
   "bin": {
     "priority-date-terminal": "bin/priority-date-terminal.js"
