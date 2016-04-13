@@ -3,4 +3,5 @@
 'use strict';
 
 var shell = require("shelljs");
-shell.exec("node "+shell.pwd()+"/priority-date-terminal.js");
+
+shell.exec("node ./priority-date-terminal.js",{async:true});
