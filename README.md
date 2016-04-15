@@ -1,5 +1,7 @@
 # Green Card Priority Date checker Command line interface
 
+> This package is deprecated due to recent update to U.S Visa website
+
 > check your priority date in Terminal
 
 ## Usage
